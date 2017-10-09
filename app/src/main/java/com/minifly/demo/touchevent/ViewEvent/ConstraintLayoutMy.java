@@ -30,6 +30,7 @@ public class ConstraintLayoutMy extends ConstraintLayout {
     public boolean onTouchEvent(MotionEvent event) {
         LogUtils.showErrLog("ConstraintLayoutMy------onTouchEvent");
         return super.onTouchEvent(event);
+//        return true;
     }
 
     @Override

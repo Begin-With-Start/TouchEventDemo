@@ -67,7 +67,18 @@ public class TouchEventView extends View {
     public boolean onTouchEvent(MotionEvent event) {
 
         LogUtils.showErrLog("TouchEventView------onTouchEvent");
-        return false;
+//        switch (event.getAction()){
+//            case MotionEvent.ACTION_DOWN:
+//
+//                break;
+//            case MotionEvent.ACTION_UP:
+//
+//                break;
+//
+//        }
+//        return false;
+
+        return super.onTouchEvent(event);
     }
 
     /**

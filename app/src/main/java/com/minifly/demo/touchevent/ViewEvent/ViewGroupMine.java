@@ -8,6 +8,8 @@ import android.widget.LinearLayout;
 
 import com.minifly.demo.touchevent.tools.LogUtils;
 
+import static android.view.View.MeasureSpec.EXACTLY;
+
 /**
  * author ：minifly
  * date: 2017/9/30
@@ -37,7 +39,10 @@ public class ViewGroupMine extends LinearLayout {
         }
     }
 
-
+    @Override
+    public void setLayoutMode(int layoutMode) {
+        super.setLayoutMode(EXACTLY);
+    }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
@@ -55,5 +60,11 @@ public class ViewGroupMine extends LinearLayout {
     public boolean dispatchTouchEvent(MotionEvent ev) {
         LogUtils.showErrLog("ViewGroupMine------dispatchTouchEvent");
         return super.dispatchTouchEvent(ev);
+    }
+
+    @Override
+    public LayoutParams generateLayoutParams(AttributeSet attrs)
+    {
+        return new LayoutParams(getContext(), attrs);
     }
 }
